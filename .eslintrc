@@ -1,0 +1,39 @@
+{
+	// TODO: make a shareable config when npm support will be ok on ECD side: see http://eslint.org/docs/developer-guide/shareable-configs
+	"extends": [
+		"standard",
+		"standard-react"
+	],
+	"env": {
+		// http://eslint.org/docs/user-guide/configuring.html#specifying-environments
+		"browser": true, // browser global variables
+		"es6": true,
+		"node": true, // Node.js global variables and Node.js-specific rules
+		"jasmine": true
+	},
+	"globals": {
+		"sinon": true
+	},
+	"rules": {
+		/** Custom */
+		"indent": [ 2, "tab", {"VariableDeclarator": 2, "SwitchCase": 1} ],
+		"no-tabs": 0,
+		"semi": [ 2, "always" ],
+		"space-in-parens": [ "warn", "always" ],
+		"space-before-function-paren": 0,
+		"no-trailing-spaces": ["error", { "skipBlankLines": true }],
+		"array-bracket-spacing": [ "warn", "always"],
+		"import/no-webpack-loader-syntax": 0,
+		"object-curly-spacing": [ "warn", "always"],
+		"no-multi-spaces": 0,
+		"key-spacing": ["error", {"beforeColon": false, "afterColon": true, "align": "value", "mode": "minimum"}],
+		"no-mixed-spaces-and-tabs": 0,
+		"no-mixed-operators": 0,
+		"prefer-const": 2,
+		"react/jsx-indent": [ 2, "tab" ],
+		"react/jsx-indent-props": 0,
+		"react/jsx-curly-spacing": [ "warn", "always"],
+		"react/no-unused-prop-types": 0, // too many false positives
+		"jsx-quotes": [ "error", "prefer-double" ]
+	}
+}
